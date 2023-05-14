@@ -1,8 +1,6 @@
 /**
  * Setup express server.
  */
-
-import cookieParser from 'cookie-parser';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import express, { Request, Response, NextFunction } from 'express';
@@ -38,6 +36,7 @@ if (EnvVars.NodeEnv === NodeEnvs.Dev) {
 
 // Security
 if (EnvVars.NodeEnv === NodeEnvs.Production) {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-call
   app.use(helmet());
 }
 

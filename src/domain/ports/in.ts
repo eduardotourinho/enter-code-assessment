@@ -1,4 +1,4 @@
-import {Answer, Form, UserAnswer} from '@src/domain/models/Form';
+import {Form, UserAnswer} from '@src/domain/models/Form';
 
 
 export interface ManageFormsUseCase {

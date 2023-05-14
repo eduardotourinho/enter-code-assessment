@@ -15,7 +15,7 @@ const submitAnswer = async (request: IReq<{ answers: Answer[] }>, response: Resp
   const formId = +request.params.id;
   const {answers} = request.body;
   // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-  const userId = <string>uuidv4();
+  const userId = uuidv4();
 
   const answersModel = answers.map(answer => <AnswerModel>({
     field: answer.fieldName,

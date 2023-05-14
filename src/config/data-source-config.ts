@@ -12,7 +12,7 @@ export const AppDataSource = new DataSource({
   password: envVars.Db.Password,
   database: envVars.Db.DbName,
   synchronize: true,
-  logging: true,
+  logging: false,
   entities: [FormEntity, FormFieldEntity, AnswerEntity],
   migrations: [],
   subscribers: [],
