@@ -2,7 +2,6 @@
  * Setup express server.
  */
 import morgan from 'morgan';
-import helmet from 'helmet';
 import express, { Request, Response, NextFunction } from 'express';
 import logger from 'jet-logger';
 
@@ -32,12 +31,6 @@ app.use(express.urlencoded({extended: true}));
 // Show routes called in console during development
 if (EnvVars.NodeEnv === NodeEnvs.Dev) {
   app.use(morgan('dev'));
-}
-
-// Security
-if (EnvVars.NodeEnv === NodeEnvs.Production) {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-  app.use(helmet());
 }
 
 // Add APIs, must be after middleware

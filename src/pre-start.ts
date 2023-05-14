@@ -4,7 +4,6 @@
  * arguments, and cron-jobs.
  */
 import 'reflect-metadata';
-import './config/ioc-config';
 import path from 'path';
 import { parse } from 'ts-command-line-args';
 import dotenv from 'dotenv';
